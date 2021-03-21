@@ -1,8 +1,7 @@
-// Write your solution here!
-
-let cats = ["Milo","Otis", "Garfield"];
+const cats = ['Milo', 'Otis', 'Garfield'];
 
 function destructivelyAppendCat(name){
+
     cats.push(name);
 }
 
@@ -19,21 +18,20 @@ function destructivelyRemoveFirstCat(){
 }
 
 function appendCat(name){
-    let newCat = [...cats, name];
-    return newCat;
+    const newArr = [ ...cats, name];
+    return newArr;
 }
 
 function prependCat(name){
-    let newCat = [name, ...cats];
-    return newCat;
+    const newArr = [name, ...cats];
+    return newArr;
+
 }
 
 function removeLastCat(){
-    let newCat = cats.slice(0,-1);
-    return newCat;
+    return cats.slice(0,cats.length -1);
 }
 
 function removeFirstCat(){
-    let newCat = cats.slice(1);
-    return newCat;
+    return cats.slice(1, cats.length);
 }
